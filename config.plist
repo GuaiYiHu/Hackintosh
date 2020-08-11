@@ -7,9 +7,9 @@
 		<key>SSDT</key>
 		<dict>
 			<key>EnableC6</key>
-			<true/>
+			<false/>
 			<key>EnableC2</key>
-			<true/>
+			<false/>
 			<key>Generate</key>
 			<dict>
 				<key>CStates</key>
@@ -20,12 +20,10 @@
 			<key>DropOem</key>
 			<false/>
 			<key>EnableC4</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>DSDT</key>
 		<dict>
-			<key>SlpSmiAtWake</key>
-			<true/>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -109,46 +107,25 @@
 					<string>change B0D3 to HDAU</string>
 				</dict>
 			</array>
-			<key>Fixes</key>
-			<dict>
-				<key>AddDTGP</key>
-				<true/>
-				<key>FixSBUS</key>
-				<true/>
-			</dict>
-			<key>DropOEM_DSM</key>
-			<dict>
-				<key>USB</key>
-				<true/>
-				<key>HDMI</key>
-				<false/>
-				<key>ATI</key>
-				<false/>
-				<key>SmBUS</key>
-				<false/>
-				<key>LAN</key>
-				<false/>
-				<key>IntelGFX</key>
-				<false/>
-				<key>WIFI</key>
-				<false/>
-				<key>LPC</key>
-				<false/>
-				<key>Firewire</key>
-				<false/>
-				<key>IDE</key>
-				<false/>
-				<key>NVidia</key>
-				<false/>
-				<key>HDA</key>
-				<false/>
-				<key>SATA</key>
-				<false/>
-			</dict>
-			<key>Debug</key>
+			<key>SlpSmiAtWake</key>
 			<false/>
 			<key>Name</key>
 			<string>DSDT.aml</string>
+			<key>Fixes</key>
+			<dict>
+				<key>FixHPET</key>
+				<true/>
+				<key>FixSBUS</key>
+				<false/>
+				<key>FixRTC</key>
+				<true/>
+				<key>AddDTGP</key>
+				<false/>
+				<key>FixIPIC</key>
+				<true/>
+			</dict>
+			<key>Debug</key>
+			<false/>
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
@@ -195,9 +172,9 @@
 		<key>Debug</key>
 		<false/>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 -igfxbeta -shikibeta -gux_defer_usb2 kext-dev-mode=1 -lilubeta</string>
+		<string>dart=0 nv_disable=1 kext-dev-mode=1 -lilubeta</string>
 		<key>XMPDetection</key>
-		<string>Yes</string>
+		<false/>
 		<key>Timeout</key>
 		<integer>5</integer>
 		<key>DefaultVolume</key>
@@ -254,14 +231,14 @@
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
-			<true/>
+			<false/>
 			<key>FixOwnership</key>
-			<true/>
+			<false/>
 			<key>Inject</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>UseIntelHDMI</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
@@ -300,36 +277,6 @@
 		<true/>
 		<key>KextsToPatch</key>
 		<array>
-			<dict>
-				<key>Find</key>
-				<data>g/sPD4OPBAAA</data>
-				<key>Comment</key>
-				<string>10.14 USB3.0</string>
-				<key>Disabled</key>
-				<false/>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>g/sPkJCQkJCQ</data>
-				<key>MatchOS</key>
-				<string>10.15.x</string>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>AQMDAwAAAAIAADABAABgAAAAAGA=</data>
-				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
-				<key>Replace</key>
-				<data>AQMDAwAAAAIAADABAACQAAAAAIA=</data>
-				<key>Disabled</key>
-				<false/>
-				<key>Comment</key>
-				<string>1536MB -&gt; 2048MB for HD4200_4400_4600 Mobile</string>
-				<key>InfoPlistPatch</key>
-				<false/>
-			</dict>
 			<dict>
 				<key>Find</key>
 				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
@@ -386,150 +333,6 @@
 				<key>InfoPlistPatch</key>
 				<false/>
 			</dict>
-			<dict>
-				<key>Find</key>
-				<data>QYP8/3QsSA==</data>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>ZscGVVPrKw==</data>
-				<key>Disabled</key>
-				<false/>
-				<key>Comment</key>
-				<string>10.10-BCM94352-5GHz-US-FCC-dv</string>
-				<key>InfoPlistPatch</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>QTnEdRs=</data>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>QTnEZpA=</data>
-				<key>Disabled</key>
-				<false/>
-				<key>Comment</key>
-				<string>AirPortBrcm4360 - PCI Error 1</string>
-				<key>InfoPlistPatch</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>QQ+3zTnBdQw=</data>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>QQ+3zTnBZpA=</data>
-				<key>Disabled</key>
-				<false/>
-				<key>Comment</key>
-				<string>AirPortBrcm4360 - PCI Error 2</string>
-				<key>InfoPlistPatch</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>g33EBHQG</data>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>g33EBGaQ</data>
-				<key>Disabled</key>
-				<false/>
-				<key>Comment</key>
-				<string>AirPortBrcm4360 - PCI Error 3</string>
-				<key>InfoPlistPatch</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>gflSqgAAdSk=</data>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>gflSqgAAZpA=</data>
-				<key>Disabled</key>
-				<false/>
-				<key>Comment</key>
-				<string>AirPortBrcm4360 - fcvo</string>
-				<key>InfoPlistPatch</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>AQAAdSU=</data>
-				<key>Comment</key>
-				<string>10.12+-第二阶段花屏</string>
-				<key>Disabled</key>
-				<true/>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IOGraphicsFamilyComment</string>
-				<key>Replace</key>
-				<data>AQAA6yU=</data>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>AQAAdSI=</data>
-				<key>Comment</key>
-				<string>10.13+-第二阶段花屏</string>
-				<key>Disabled</key>
-				<false/>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IOGraphicsFamilyComment</string>
-				<key>Replace</key>
-				<data>AQAA6yI=</data>
-				<key>MatchOS</key>
-				<string>10.13.x</string>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>hBnUEQ==</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>NQLsEA==</data>
-				<key>Disabled</key>
-				<false/>
-				<key>Comment</key>
-				<string>Patching 11d41984 with 10ec0235 codec (patched by AppleHDA Patcher.app)</string>
-				<key>InfoPlistPatch</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>YQLsEA==</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>AAAAAA==</data>
-				<key>Disabled</key>
-				<false/>
-				<key>Comment</key>
-				<string>Zeroing 10ec0261 codec (patched by AppleHDA Patcher.app)</string>
-				<key>InfoPlistPatch</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>Find</key>
-				<data>hQjsEA==</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>AAAAAA==</data>
-				<key>Disabled</key>
-				<false/>
-				<key>Comment</key>
-				<string>Zeroing 10ec0885 codec (patched by AppleHDA Patcher.app)</string>
-				<key>InfoPlistPatch</key>
-				<false/>
-			</dict>
 		</array>
 		<key>KernelXCPM</key>
 		<true/>
@@ -549,10 +352,6 @@
 				<key>MatchOS</key>
 				<string>10.15.x</string>
 			</dict>
-		</array>
-		<key>ForceKextsToLoad</key>
-		<array>
-			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
 		</array>
 		<key>AppleIntelCPUPM</key>
 		<false/>
@@ -605,6 +404,8 @@
 	<dict>
 		<key>InjectKexts</key>
 		<string>Detect</string>
+		<key>InjectSystemID</key>
+		<true/>
 	</dict>
 </dict>
 </plist>
