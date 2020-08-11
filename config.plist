@@ -38,6 +38,30 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
+				<string>SSDT-EHCx_OFF.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-HPET_RTC_TIMR-fix.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-IPIC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
 				<string>SSDT-PNLF.aml</string>
 			</dict>
 			<dict>
@@ -180,110 +204,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>change EHC1 to EH01</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>RUhDMQ==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>RUgwMQ==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change EHC2 to EH02</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>RUhDMg==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>RUgwMg==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change EUSB to EH01</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>RVVTQg==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>RUgwMQ==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change USBE to EH02</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>VVNCRQ==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>RUgwMg==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>change B0D3 to HDAU</string>
 				<key>Count</key>
 				<integer>1</integer>
@@ -416,10 +336,10 @@
 				<data>BgAmCg==</data>
 				<key>AAPL00,override-no-edid</key>
 				<data>AP///////wAGrz0UAAAAAAAXAQSVHxF4Arv1lFVUkCcjUFQAAAABAQEBAQEBAQEBAQEBAQEBsDaASnE4NEAwIDUANa0QAAAYAAAADwAAAAAAAAAAAAAAAAAgAAAA/gBBVU8KICAgICAgICAgAAAA/gBCMTQwSFROMDEuNCAKAOY=</data>
-				<key>enable-hdmi20</key>
-				<data>AQAAAA==</data>
 				<key>device-id</key>
 				<data>EgQAAA==</data>
+				<key>enable-hdmi20</key>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con1-enable</key>
 				<integer>1</integer>
 				<key>framebuffer-con1-flags</key>
@@ -446,10 +366,10 @@
 				<data>AQAAAEAAAAAfAgAABQUJAQ==</data>
 				<key>framebuffer-patch2-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-patch2-replace</key>
-				<data>AwAiDQADAwMAAAAIAAAAAgAAAAAAAACAmRQ=</data>
 				<key>framebuffer-patch2-find</key>
 				<data>AwAiDQADAwMAAAACAAAwAQAAAAAAAABgmRQ=</data>
+				<key>framebuffer-patch2-replace</key>
+				<data>AwAiDQADAwMAAAAIAAAAAgAAAAAAAACAmRQ=</data>
 				<key>framebuffer-unifiedmem</key>
 				<data>AAAAgA==</data>
 				<key>model</key>
@@ -868,7 +788,7 @@
 			<key>IncreasePciBarSize</key>
 			<false/>
 			<key>LapicKernelPanic</key>
-			<false/>
+			<true/>
 			<key>PanicNoKextDump</key>
 			<true/>
 			<key>PowerTimeoutKernelPanic</key>
@@ -878,6 +798,37 @@
 			<key>XhciPortLimit</key>
 			<true/>
 		</dict>
+		<key>Patch</key>
+		<array>
+			<dict>
+				<key>Base</key>
+				<string>__ZN8AppleRTC14updateChecksumEv</string>
+				<key>Comment</key>
+				<string>Disable RTC checksum update on poweroff</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data></data>
+				<key>Identifier</key>
+				<string>com.apple.driver.AppleRTC</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>Replace</key>
+				<data>ww==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+		</array>
 	</dict>
 	<key>Misc</key>
 	<dict>
