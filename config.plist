@@ -127,6 +127,7 @@
 			<string>SSDT.aml</string>
 			<string>SSDT-EC.aml</string>
 			<string>SSDT-FN.aml</string>
+			<string>SSDT-MCHC.aml</string>
 			<string>SSDT-PNLF.aml</string>
 			<string>SSDT-4.aml</string>
 			<string>SSDT-9.aml</string>
