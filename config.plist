@@ -262,6 +262,19 @@
 				<key>#Comment</key>
 				<string>Intel LPC</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
+			<dict>
+				<key>model</key>
+				<string>Realtek ALC235</string>
+				<key>layout-id</key>
+				<integer>14</integer>
+				<key>hda-gfx</key>
+				<data>AAsKDQ==</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,27,0</string>
+				<key>device_type</key>
+				<string>Audio device</string>
+			</dict>
 		</dict>
 		<key>Audio</key>
 		<dict>
