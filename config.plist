@@ -130,6 +130,7 @@
 			<string>SSDT-IMEI.aml</string>
 			<string>SSDT-MCHC.aml</string>
 			<string>SSDT-PNLF.aml</string>
+			<string>SSDT-SBUS.aml</string>
 			<string>SSDT-4.aml</string>
 			<string>SSDT-9.aml</string>
 			<string>SSDT-10.aml</string>
