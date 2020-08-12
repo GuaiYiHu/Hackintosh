@@ -66,11 +66,29 @@
 					<key>Comment</key>
 					<string>change B0D3 to HDAU</string>
 				</dict>
+				<dict>
+					<key>Find</key>
+					<data>X1EzOA==</data>
+					<key>Replace</key>
+					<data>WFEzOA==</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change _Q38 to XQ38</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>X1EzOQ==</data>
+					<key>Replace</key>
+					<data>WFEzOQ==</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change _Q39 to XQ39</string>
+				</dict>
 			</array>
 			<key>SlpSmiAtWake</key>
 			<false/>
-			<key>Name</key>
-			<string>DSDT.aml</string>
 			<key>Fixes</key>
 			<dict>
 				<key>FixHPET</key>
@@ -106,9 +124,9 @@
 		</array>
 		<key>SortedOrder</key>
 		<array>
-			<string>DSDT.aml</string>
 			<string>SSDT.aml</string>
 			<string>SSDT-EC.aml</string>
+			<string>SSDT-FN.aml</string>
 			<string>SSDT-PNLF.aml</string>
 			<string>SSDT-4.aml</string>
 			<string>SSDT-9.aml</string>
