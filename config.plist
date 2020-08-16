@@ -581,18 +581,18 @@
 				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con1-enable</key>
+				<key>framebuffer-con2-enable</key>
 				<integer>1</integer>
-				<key>framebuffer-con1-flags</key>
+				<key>framebuffer-con2-flags</key>
 				<data>BgAAAA==</data>
-				<key>framebuffer-con1-pipe</key>
+				<key>framebuffer-con2-pipe</key>
 				<data>EgAAAA==</data>
-				<key>framebuffer-con1-type</key>
+				<key>framebuffer-con2-type</key>
 				<data>AAgAAA==</data>
 				<key>framebuffer-cursormem</key>
 				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
-				<integer>1</integer>
+				<data>AQAAAA==</data>
 				<key>framebuffer-patch0-enable</key>
 				<integer>1</integer>
 				<key>framebuffer-patch0-find</key>
@@ -972,62 +972,6 @@
 				<string></string>
 				<key>Replace</key>
 				<data>AAAAAAAAAAAAAAA=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>Enable 9MB cursor bytes, 0x0a260006</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AppleBacklight</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>Replace</key>
-				<data>BgAmCgEDAwMAAAACAAAwAQAAkAA=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>HDMI</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>AQUJAAAEAACHAAAAAgQJAAAEAACHAAAA</data>
-				<key>Identifier</key>
-				<string>AppleIntelFramebufferAzul</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>Replace</key>
-				<data>AgQJAAAIAACHAAAA/wAAAAEAAABAAAAA</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
