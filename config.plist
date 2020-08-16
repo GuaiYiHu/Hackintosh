@@ -28,7 +28,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-Disable-DGPU.aml</string>
 			</dict>
@@ -70,7 +70,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
+				<string>SSDT-HPET_RTC_TIMR-fix.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
 				<string>SSDT-IMEI.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-IPIC.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -150,7 +166,7 @@
 				<key>Comment</key>
 				<string>change B0D3 to HDAU</string>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -176,9 +192,9 @@
 				<key>Comment</key>
 				<string>change GFX0 to IGPU</string>
 				<key>Count</key>
-				<integer>20</integer>
+				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>R0ZYMA==</data>
 				<key>Limit</key>
@@ -202,7 +218,7 @@
 				<key>Comment</key>
 				<string>Change (GPRW,2,N) to XPRW, SSDT-PRW.aml</string>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -228,7 +244,7 @@
 				<key>Comment</key>
 				<string>change _DSM to XDSM</string>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -254,7 +270,7 @@
 				<key>Comment</key>
 				<string>change _Q38 to XQ38</string>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -280,7 +296,7 @@
 				<key>Comment</key>
 				<string>change _Q39 to XQ39</string>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -306,7 +322,7 @@
 				<key>Comment</key>
 				<string>_BIF(0,N) to XBIF(0,N)</string>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -332,7 +348,7 @@
 				<key>Comment</key>
 				<string>_BST(0,N) to XBST(0,N)</string>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -358,7 +374,7 @@
 				<key>Comment</key>
 				<string>RSMD(0,S) to XSMD(0,S)</string>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -384,7 +400,7 @@
 				<key>Comment</key>
 				<string>WSMD(1,S) to XSMD(1,S)</string>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -482,6 +498,84 @@
 	<dict>
 		<key>Add</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
+			<dict>
+				<key>#Comment</key>
+				<string>Intel LPC</string>
+				<key>compatible</key>
+				<string>pci8086,8c4b</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
+			<dict>
+				<key>#Comment</key>
+				<string>Intel xHCI</string>
+				<key>AAPL,current-available</key>
+				<integer>2100</integer>
+				<key>AAPL,current-extra</key>
+				<integer>2200</integer>
+				<key>AAPL,current-extra-in-sleep</key>
+				<integer>1600</integer>
+				<key>AAPL,max-port-current-in-sleep</key>
+				<integer>2100</integer>
+				<key>RM,disable_FakePCIID</key>
+				<integer>1</integer>
+				<key>subsystem-id</key>
+				<data>cHIAAA==</data>
+				<key>subsystem-vendor-id</key>
+				<data>hoAAAA==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1a,0x0)</key>
+			<dict>
+				<key>AAPL,current-available</key>
+				<integer>2100</integer>
+				<key>AAPL,current-extra</key>
+				<integer>2200</integer>
+				<key>AAPL,current-extra-in-sleep</key>
+				<integer>1600</integer>
+				<key>AAPL,max-port-current-in-sleep</key>
+				<integer>2100</integer>
+				<key>subsystem-id</key>
+				<data>cHIAAA==</data>
+				<key>subsystem-vendor-id</key>
+				<data>hoAAAA==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
+			<dict>
+				<key>AAPL,current-available</key>
+				<integer>2100</integer>
+				<key>AAPL,current-extra</key>
+				<integer>2200</integer>
+				<key>AAPL,current-extra-in-sleep</key>
+				<integer>1600</integer>
+				<key>AAPL,max-port-current-in-sleep</key>
+				<integer>2100</integer>
+				<key>subsystem-id</key>
+				<data>cHIAAA==</data>
+				<key>subsystem-vendor-id</key>
+				<data>hoAAAA==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,27,0</string>
+				<key>device_type</key>
+				<string>Audio device</string>
+				<key>hda-gfx</key>
+				<string>onboard-2</string>
+				<key>layout-id</key>
+				<data>DgAAAA==</data>
+				<key>model</key>
+				<string>8 Series/C220 Series Chipset High Definition Audio Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x3,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,3,0</string>
+				<key>device_type</key>
+				<string>Audio device</string>
+				<key>model</key>
+				<string>Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
@@ -492,6 +586,8 @@
 				<data>EgQAAA==</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
+				<key>disable-external-gpu</key>
+				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con1-enable</key>
@@ -528,90 +624,6 @@
 				<data>AAAAgA==</data>
 				<key>model</key>
 				<string>Intel HD Graphics 4600</string>
-			</dict>
-			<key>PciRoot(0)/Pci(0x1f,0)</key>
-			<dict>
-				<key>#Comment</key>
-				<string>Intel LPC</string>
-				<key>compatible</key>
-				<string>pci8086,9c43</string>
-			</dict>
-			<key>PciRoot(0)/Pci(0x14,0)</key>
-			<dict>
-				<key>#Comment</key>
-				<string>Intel xHCI</string>
-				<key>AAPL,current-available</key>
-				<integer>2100</integer>
-				<key>AAPL,current-extra</key>
-				<integer>2200</integer>
-				<key>AAPL,current-extra-in-sleep</key>
-				<integer>1600</integer>
-				<key>AAPL,max-port-current-in-sleep</key>
-				<integer>2100</integer>
-				<key>RM,disable_FakePCIID</key>
-				<integer>1</integer>
-				<key>subsystem-id</key>
-				<data>cHIAAA==</data>
-				<key>subsystem-vendor-id</key>
-				<data>hoAAAA==</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x3,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,3,0</string>
-				<key>device_type</key>
-				<string>Audio device</string>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>layout-id</key>
-				<integer>41</integer>
-				<key>model</key>
-				<string>Intel Haswell HD4600 HDMI</string>
-				<key>no-controller-patch</key>
-				<integer>1</integer>
-			</dict>
-			<key>PciRoot(0)/Pci(0x1a,0)</key>
-			<dict>
-				<key>AAPL,current-available</key>
-				<integer>2100</integer>
-				<key>AAPL,current-extra</key>
-				<integer>2200</integer>
-				<key>AAPL,current-extra-in-sleep</key>
-				<integer>1600</integer>
-				<key>AAPL,max-port-current-in-sleep</key>
-				<integer>2100</integer>
-				<key>subsystem-id</key>
-				<data>cHIAAA==</data>
-				<key>subsystem-vendor-id</key>
-				<data>hoAAAA==</data>
-			</dict>
-			<key>PciRoot(0)/Pci(0x1d,0)</key>
-			<dict>
-				<key>AAPL,current-available</key>
-				<integer>2100</integer>
-				<key>AAPL,current-extra</key>
-				<integer>2200</integer>
-				<key>AAPL,current-extra-in-sleep</key>
-				<integer>1600</integer>
-				<key>AAPL,max-port-current-in-sleep</key>
-				<integer>2100</integer>
-				<key>subsystem-id</key>
-				<data>cHIAAA==</data>
-				<key>subsystem-vendor-id</key>
-				<data>hoAAAA==</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,27,0</string>
-				<key>device_type</key>
-				<string>Audio device</string>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>layout-id</key>
-				<integer>14</integer>
-				<key>model</key>
-				<string>Realtek ALC235</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -941,6 +953,90 @@
 				<string></string>
 				<key>Replace</key>
 				<data>ww==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>Comment</key>
+				<string>Enable TRIM for SSD</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>AEFQUExFIFNTRAA=</data>
+				<key>Identifier</key>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>Replace</key>
+				<data>AAAAAAAAAAAAAAA=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>Comment</key>
+				<string>Enable 9MB cursor bytes, 0x0a260006</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
+				<key>Identifier</key>
+				<string>com.apple.driver.AppleBacklight</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>Replace</key>
+				<data>BgAmCgEDAwMAAAACAAAwAQAAkAA=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>Comment</key>
+				<string>HDMI</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>AQUJAAAEAACHAAAAAgQJAAAEAACHAAAA</data>
+				<key>Identifier</key>
+				<string>AppleIntelFramebufferAzul</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>Replace</key>
+				<data>AgQJAAAIAACHAAAA/wAAAAEAAABAAAAA</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
