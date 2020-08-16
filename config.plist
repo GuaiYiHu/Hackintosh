@@ -563,7 +563,7 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>layout-id</key>
-				<data>DgAAAA==</data>
+				<integer>14</integer>
 				<key>model</key>
 				<string>8 Series/C220 Series Chipset High Definition Audio Controller</string>
 			</dict>
@@ -615,6 +615,21 @@
 				<data>AAAAgA==</data>
 				<key>model</key>
 				<string>Intel HD Graphics 4600</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x3,0x0)</key>
+			<dict>
+				<key>device_type</key>
+				<string>Audio device</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,3,0</string>
+				<key>no-controller-patch</key>
+				<integer>1</integer>
+				<key>layout-id</key>
+				<integer>14</integer>
+				<key>model</key>
+				<string>Intel Haswell HD4600 HDMI</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
