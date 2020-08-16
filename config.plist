@@ -324,7 +324,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>X0JJRgA=</data>
 				<key>Limit</key>
@@ -350,7 +350,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>X0JTVAA=</data>
 				<key>Limit</key>
@@ -618,18 +618,18 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x3,0x0)</key>
 			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,3,0</string>
 				<key>device_type</key>
 				<string>Audio device</string>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,3,0</string>
-				<key>no-controller-patch</key>
-				<integer>1</integer>
 				<key>layout-id</key>
 				<integer>14</integer>
 				<key>model</key>
 				<string>Intel Haswell HD4600 HDMI</string>
+				<key>no-controller-patch</key>
+				<integer>1</integer>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1173,7 +1173,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v dart=0 debug=0x100 keepsyms=1 -lilubetaall</string>
+				<string>-v dart=0 debug=0x100 keepsyms=1 -lilubetaall vsmcgen=1</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
