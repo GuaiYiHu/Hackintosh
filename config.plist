@@ -112,12 +112,6 @@
 		<key>DropTables</key>
 		<array>
 			<dict>
-				<key>TableId</key>
-				<string>CpuPm</string>
-				<key>Signature</key>
-				<string>SSDT</string>
-			</dict>
-			<dict>
 				<key>Signature</key>
 				<string>DMAR</string>
 			</dict>
@@ -131,9 +125,7 @@
 			<string>SSDT-MCHC.aml</string>
 			<string>SSDT-PNLF.aml</string>
 			<string>SSDT-SBUS.aml</string>
-			<string>SSDT-4.aml</string>
 			<string>SSDT-9.aml</string>
-			<string>SSDT-10.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
@@ -310,7 +302,7 @@
 			<key>PciRoot(0)/Pci(0x1f,0)</key>
 			<dict>
 				<key>compatible</key>
-				<string>pci8086,9c43</string>
+				<string>pci8086,8c4b</string>
 				<key>#Comment</key>
 				<string>Intel LPC</string>
 			</dict>
@@ -377,7 +369,7 @@
 		<key>AppleRTC</key>
 		<true/>
 		<key>KernelPm</key>
-		<true/>
+		<false/>
 		<key>KernelLapic</key>
 		<true/>
 		<key>KextsToPatch</key>
