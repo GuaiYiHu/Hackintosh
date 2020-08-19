@@ -868,15 +868,15 @@
 					<key>2FingersClickAction</key>
 					<integer>2</integer>
 					<key>ClickpadVirtualButtons</key>
-					<false/>
+					<true/>
 					<key>ClickpadVirtualButtonsArea</key>
-					<integer>0</integer>
+					<integer>22</integer>
 					<key>DisablePhysicalClicks</key>
 					<false/>
 					<key>EnablePointingOnVirtualButtonArea</key>
 					<false/>
 					<key>VirtualMiddleButton</key>
-					<false/>
+					<true/>
 				</dict>
 				<key>Dragging</key>
 				<dict>
@@ -891,7 +891,7 @@
 					<key>FLiftDragReleaseTimeOut</key>
 					<integer>300</integer>
 					<key>FingerPressDrag</key>
-					<false/>
+					<true/>
 					<key>FingerPressDragPressure</key>
 					<dict>
 						<key>ELANv2</key>
@@ -915,13 +915,13 @@
 				<key>FingersPress</key>
 				<dict>
 					<key>2FingersPressAction</key>
-					<integer>0</integer>
+					<integer>18</integer>
 					<key>3FingersPressAction</key>
-					<integer>0</integer>
+					<integer>19</integer>
 					<key>4FingersPressAction</key>
-					<integer>0</integer>
+					<integer>20</integer>
 					<key>5FingersPressAction</key>
-					<integer>0</integer>
+					<integer>13</integer>
 					<key>FingersPressTimeOut</key>
 					<integer>700</integer>
 				</dict>
@@ -956,13 +956,13 @@
 				<key>Others</key>
 				<dict>
 					<key>4FingersPinchAction</key>
-					<integer>0</integer>
+					<integer>4</integer>
 					<key>5FingersPinchAction</key>
-					<integer>0</integer>
+					<integer>3</integer>
 					<key>CircularRotate</key>
-					<false/>
+					<true/>
 					<key>DisableTPadOnLIDClose</key>
-					<false/>
+					<true/>
 					<key>MaxTouchEndDelta</key>
 					<dict>
 						<key>ELANv2</key>
@@ -1038,11 +1038,11 @@
 					<key>PinchRotateMinSamples</key>
 					<integer>3</integer>
 					<key>PinchZoom</key>
-					<false/>
+					<true/>
 					<key>PinchZoomDelta</key>
 					<integer>300</integer>
 					<key>Rotation</key>
-					<false/>
+					<true/>
 					<key>RotationDelta</key>
 					<integer>350</integer>
 					<key>RotationMaxCFingDelta</key>
@@ -1178,7 +1178,7 @@
 						<key>Auto2FingScroll</key>
 						<false/>
 						<key>Continuous2FingScroll</key>
-						<false/>
+						<true/>
 						<key>Inertial2FingScroll</key>
 						<true/>
 						<key>ScrollSmoothSamples</key>
@@ -1193,7 +1193,7 @@
 						<key>AutoEdgeScroll</key>
 						<false/>
 						<key>ContinuousEdgeScroll</key>
-						<false/>
+						<true/>
 						<key>EContScrollMaxDelta</key>
 						<dict>
 							<key>ELANv2</key>
@@ -1224,7 +1224,7 @@
 						<key>EdgeScrollAccelMode</key>
 						<integer>0</integer>
 						<key>EdgeScrolling</key>
-						<false/>
+						<true/>
 						<key>EdgeVScrollAdaptArea</key>
 						<integer>4</integer>
 						<key>EdgeVScrollArea</key>
@@ -1296,53 +1296,53 @@
 				<key>Swiping</key>
 				<dict>
 					<key>3FingerSwipeDownAction</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>3FingerSwipeLeftAction</key>
 					<integer>11</integer>
 					<key>3FingerSwipeRightAction</key>
 					<integer>12</integer>
 					<key>3FingerSwipeUpAction</key>
-					<integer>0</integer>
+					<integer>3</integer>
 					<key>3FingerSwipes</key>
 					<true/>
 					<key>4FingerSwipeDownAction</key>
-					<integer>4</integer>
+					<integer>9</integer>
 					<key>4FingerSwipeLeftAction</key>
-					<integer>6</integer>
+					<integer>16</integer>
 					<key>4FingerSwipeRightAction</key>
-					<integer>7</integer>
+					<integer>15</integer>
 					<key>4FingerSwipeUpAction</key>
-					<integer>4</integer>
+					<integer>2</integer>
 					<key>4FingerSwipes</key>
 					<true/>
 					<key>EdgeSwipeBottom</key>
 					<integer>0</integer>
 					<key>EdgeSwipeDeltaX</key>
-					<integer>25</integer>
+					<integer>50</integer>
 					<key>EdgeSwipeDeltaY</key>
-					<integer>33</integer>
-					<key>EdgeSwipeFingers</key>
-					<integer>6</integer>
-					<key>EdgeSwipeLeft</key>
-					<integer>0</integer>
-					<key>EdgeSwipeRight</key>
-					<integer>0</integer>
-					<key>EdgeSwipeSenseHArea</key>
-					<integer>0</integer>
-					<key>EdgeSwipeSenseVArea</key>
-					<integer>0</integer>
-					<key>EdgeSwipeTop</key>
-					<integer>0</integer>
-					<key>EdgeSwipes</key>
-					<false/>
-					<key>EdgeSwipes2Ways</key>
-					<false/>
-					<key>EdgeSwipesResetPointer</key>
-					<false/>
-					<key>MultiFingerSwipesDeltaX</key>
-					<integer>80</integer>
-					<key>MultiFingerSwipesDeltaY</key>
 					<integer>60</integer>
+					<key>EdgeSwipeFingers</key>
+					<integer>2</integer>
+					<key>EdgeSwipeLeft</key>
+					<integer>6</integer>
+					<key>EdgeSwipeRight</key>
+					<integer>14</integer>
+					<key>EdgeSwipeSenseHArea</key>
+					<integer>7</integer>
+					<key>EdgeSwipeSenseVArea</key>
+					<integer>5</integer>
+					<key>EdgeSwipeTop</key>
+					<integer>10</integer>
+					<key>EdgeSwipes</key>
+					<true/>
+					<key>EdgeSwipes2Ways</key>
+					<true/>
+					<key>EdgeSwipesResetPointer</key>
+					<true/>
+					<key>MultiFingerSwipesDeltaX</key>
+					<integer>250</integer>
+					<key>MultiFingerSwipesDeltaY</key>
+					<integer>200</integer>
 				</dict>
 				<key>Tapping</key>
 				<dict>
@@ -1370,17 +1370,17 @@
 					<key>1FingerTapAction</key>
 					<integer>35</integer>
 					<key>2FingersTapAction</key>
-					<integer>33</integer>
+					<integer>34</integer>
 					<key>3FingersTapAction</key>
-        			<integer>34</integer>
+					<integer>33</integer>
 					<key>4FingersTapAction</key>
-					<integer>0</integer>
+					<integer>4</integer>
 					<key>5FingersTapAction</key>
-					<integer>0</integer>
+					<integer>5</integer>
 					<key>CornerTapAreaHeight</key>
-					<integer>0</integer>
+					<integer>10</integer>
 					<key>CornerTapAreaLength</key>
-					<integer>0</integer>
+					<integer>10</integer>
 					<key>CornerTapStartABS</key>
 					<true/>
 					<key>DisableBottomCornersTap</key>
@@ -1394,7 +1394,7 @@
 					<key>MulFingTapTimeOut</key>
 					<integer>200</integer>
 					<key>TapMaxDelta</key>
-					<integer>200</integer>
+					<integer>100</integer>
 					<key>TrackpadTappingCorners</key>
 					<false/>
 				</dict>
