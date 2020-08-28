@@ -1127,20 +1127,6 @@
 				<key>Auxiliary</key>
 				<false/>
 				<key>Comment</key>
-				<string>Not signed for security reasons</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Name</key>
-				<string>Windows 10</string>
-				<key>Path</key>
-				<string>PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x1,0x0,0x0)/HD(1,GPT,13B42AE2-2799-4A29-BF53-66BEE558278F,0x22,0x107FDE)/\EFI\Microsoft\Boot\Bootmgfw.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Auxiliary</key>
-				<false/>
-				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
 				<true/>
