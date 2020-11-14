@@ -1157,6 +1157,8 @@
 			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
+			<key>ForceSecureBootScheme</key>
+			<false/>
 			<key>IncreasePciBarSize</key>
 			<false/>
 			<key>LapicKernelPanic</key>
@@ -1392,9 +1394,9 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C17439108J9FH31UE</string>
+			<string>C02305802QXFJQW1M</string>
 			<key>ProcessorType</key>
-			<integer>0</integer>
+			<integer>1797</integer>
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>ROM</key>
@@ -1402,11 +1404,11 @@
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
-			<string>MacBookPro11,1</string>
+			<string>MacBookPro11,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02L34Q7FGYY</string>
+			<string>C02K6ZYCG86R</string>
 			<key>SystemUUID</key>
-			<string>7464B769-319C-4D39-8B8D-F3BB91F81974</string>
+			<string>A4A169E6-B0A3-41FB-AE8B-27C613DDEB15</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
