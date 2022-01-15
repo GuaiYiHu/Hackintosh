@@ -719,7 +719,7 @@
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.6.0</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -827,7 +827,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/FakePCIID</string>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.6.0</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
