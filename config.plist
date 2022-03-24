@@ -754,7 +754,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -812,15 +812,15 @@
 			<key>AppleXcpmCfgLock</key>
 			<true/>
 			<key>AppleXcpmExtraMsrs</key>
-			<true/>
+			<false/>
 			<key>AppleXcpmForceBoost</key>
 			<false/>
 			<key>CustomSMBIOSGuid</key>
 			<false/>
 			<key>DisableIoMapper</key>
-			<true/>
-			<key>DisableLinkeditJettison</key>
 			<false/>
+			<key>DisableLinkeditJettison</key>
+			<true/>
 			<key>DisableRtcChecksum</key>
 			<true/>
 			<key>ExtendBTFeatureFlags</key>
@@ -830,7 +830,7 @@
 			<key>ForceSecureBootScheme</key>
 			<false/>
 			<key>IncreasePciBarSize</key>
-			<true/>
+			<false/>
 			<key>LapicKernelPanic</key>
 			<false/>
 			<key>LegacyCommpage</key>
@@ -838,7 +838,7 @@
 			<key>PanicNoKextDump</key>
 			<false/>
 			<key>PowerTimeoutKernelPanic</key>
-			<true/>
+			<false/>
 			<key>ProvideCurrentCpuInfo</key>
 			<false/>
 			<key>SetApfsTrimTimeout</key>
@@ -853,9 +853,9 @@
 			<key>CustomKernel</key>
 			<false/>
 			<key>FuzzyMatch</key>
-			<false/>
+			<true/>
 			<key>KernelArch</key>
-			<string>Auto</string>
+			<string>x86_64</string>
 			<key>KernelCache</key>
 			<string>Auto</string>
 		</dict>
