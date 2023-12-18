@@ -184,7 +184,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>AAA=</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -214,7 +214,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>AAA=</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -244,7 +244,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>AAA=</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -274,7 +274,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>AAA=</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -304,7 +304,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>AAA=</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -334,7 +334,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>AAA=</data>
+				<data></data>
 			</dict>
 		</array>
 		<key>Quirks</key>
@@ -411,7 +411,7 @@
 			<key>ProvideMaxSlide</key>
 			<integer>0</integer>
 			<key>RebuildAppleMemoryMap</key>
-			<true/>
+			<false/>
 			<key>ResizeAppleGpuBars</key>
 			<integer>-1</integer>
 			<key>SetupVirtualMap</key>
@@ -879,7 +879,7 @@
 			<key>InstanceIdentifier</key>
 			<string></string>
 			<key>LauncherOption</key>
-			<string>Full</string>
+			<string>System</string>
 			<key>LauncherPath</key>
 			<string>Default</string>
 			<key>PickerAttributes</key>
@@ -1291,7 +1291,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100 alcid=1 -no_compat_check -lilubetaall radpg=15</string>
+				<string>-v keepsyms=1 alcid=1 -no_compat_check -lilubetaall radpg=15</string>
 				<key>csr-active-config</key>
 				<data>AwoAAA==</data>
 				<key>prev-lang:kbd</key>
