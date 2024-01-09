@@ -1368,9 +1368,9 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02231200J9F2FRJA</string>
+			<string>C02545403GUGPF71F</string>
 			<key>ProcessorType</key>
-			<integer>1281</integer>
+			<integer>1541</integer>
 			<key>ROM</key>
 			<data>ESIzRFVm</data>
 			<key>SpoofVendor</key>
@@ -1378,11 +1378,11 @@
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>SystemProductName</key>
-			<string>iMac13,2</string>
+			<string>iMac17,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02J59ZXDNCW</string>
+			<string>C02QNXYHGG7L</string>
 			<key>SystemUUID</key>
-			<string>1A09E32B-6E4A-4879-A6E2-3AF622E6B7A8</string>
+			<string>885DDA92-8E31-4284-BA0A-08CF2F29CF48</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
