@@ -1301,7 +1301,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>keepsyms=1 alcid=1 -no_compat_check -lilubetaall radpg=15</string>
+				<string>keepsyms=1 alcid=1 -no_compat_check -lilubetaall</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
