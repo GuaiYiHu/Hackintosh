@@ -299,16 +299,10 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,27,0</string>
-				<key>device_type</key>
-				<string>Audio device</string>
-				<key>layout-id</key>
-				<integer>5</integer>
-				<key>model</key>
-				<string>6 Series/C200 Series Chipset Family High Definition Audio Controller</string>
+				<key>device-id</key>
+				<data>Oh4AAA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -321,10 +315,16 @@
 				<key>model</key>
 				<string>Intel Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
 			<dict>
-				<key>device-id</key>
-				<data>3gDOAA==</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,27,0</string>
+				<key>device_type</key>
+				<string>Audio device</string>
+				<key>layout-id</key>
+				<integer>5</integer>
+				<key>model</key>
+				<string>6 Series/C200 Series Chipset Family High Definition Audio Controller</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -591,7 +591,7 @@
 		<key>Quirks</key>
 		<dict>
 			<key>AppleCpuPmCfgLock</key>
-			<true/>
+			<false/>
 			<key>AppleXcpmCfgLock</key>
 			<false/>
 			<key>AppleXcpmExtraMsrs</key>
@@ -802,7 +802,7 @@
 				<key>csr-active-config</key>
 				<data>7w8AAA==</data>
 				<key>prev-lang:kbd</key>
-				<data></data>
+				<data>emgtSGFuczoyNTI=</data>
 				<key>run-efi-updater</key>
 				<string>No</string>
 			</dict>
@@ -876,9 +876,9 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C020482074NPHC1UE</string>
+			<string>C02252104J9F2FRFB</string>
 			<key>ProcessorType</key>
-			<integer>4105</integer>
+			<integer>1540</integer>
 			<key>ROM</key>
 			<data>40MLPdE8</data>
 			<key>SpoofVendor</key>
@@ -886,11 +886,11 @@
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>SystemProductName</key>
-			<string>iMac20,1</string>
+			<string>iMac13,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02DRRYAPN5T</string>
+			<string>C02JWTZFDNCW</string>
 			<key>SystemUUID</key>
-			<string>1EB43170-EAA1-4B94-A3B3-11923FB0133F</string>
+			<string>3974402A-69B7-4726-9850-B81A1EC4BC30</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
