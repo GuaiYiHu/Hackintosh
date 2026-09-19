@@ -1,0 +1,9 @@
+# macOS metadata generated on FAT volumes
+.DS_Store
+._*
+.Spotlight-V100/
+.Trashes/
+.fseventsd/
+
+# Apple firmware and update artifacts
+EFI/APPLE/
