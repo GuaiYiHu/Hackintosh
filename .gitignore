@@ -7,3 +7,10 @@
 
 # Apple firmware and update artifacts
 EFI/APPLE/
+
+# Local configuration and Kext backups
+EFI/OC/config.*.plist
+EFI/OC/Kexts/*.pre-*.kext/
+EFI/OC/Kexts/CPUFriend.kext/
+EFI/OC/Kexts/CPUFriendDataProvider.kext/
+opencore-*.txt
