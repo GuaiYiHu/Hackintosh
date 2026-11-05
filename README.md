@@ -10,13 +10,31 @@
 | 内存 | 64 GB |
 | SMBIOS | MacPro7,1 |
 | 已验证系统 | macOS 26.7.2，build 25G332；Darwin 25.6.0 |
+| OpenCore | 1.0.8 RELEASE，与配套 UEFI 驱动一起更新 |
 | CPU 调频 | E5PStateMac 0.4.0 控制版；保留 Lilu 和 CpuTscSync |
+
+## 2026-11-05 引导与驱动升级
+
+已写入 EFI 并通过文件哈希与 `ocvalidate 1.0.8` 校验；升级后的重启和功能验证尚未完成。
+
+| 组件 | 升级 |
+| --- | --- |
+| OpenCore 与配套 UEFI 驱动 | 1.0.7 → 1.0.8 |
+| VirtualSMC / SMCProcessor / SMCSuperIO | 1.3.7 → 1.3.8 |
+| BlueToolFixup | 2.7.1 → 2.7.2 |
+| AppleALC | 1.9.6 → 1.9.8 |
+| WhateverGreen | 1.7.0 → 1.7.1 |
+| SimpleHDA | 1.0.0 → 1.0.1 |
+
+Lilu、CpuTscSync、RestrictEvents、USBToolBox、RealtekRTL8111 已与最新稳定版二进制核对一致；AMFIPass 和两项 RtWlan 驱动也已核对上游版本。保留本机 UTBMap、XHCI 定制项、ACPI 与 E5PStateMac。
+
+原 OpenCore 1.0.7 不支持配置中的六项 `UEFI → Drivers → HideVerbose` 字段，会出现 `No schema for HideVerbose`。此次配套升级为支持该字段的 [OpenCore 1.0.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.8)，配置使用相同版本的校验器验证。SimpleHDA 1.0.1 要求的 `DisableLinkeditJettison=true` 已存在，保留原启动参数。
 
 ## 使用前
 
 `EFI/OC/config.plist` 中的 `PlatformInfo → Generic → MLB / ROM / SystemSerialNumber / SystemUUID` 已清空或置零。使用者需要填写自己的机器身份信息。此配置不能直接替代另一台机器的 EFI，USB 映射、ACPI 和硬件驱动应按实际硬件核对。
 
-此提交只同步仓库，未修改运行中电脑的 EFI。Apple 固件更新文件、配置备份、旧版 Kext 备份，以及未被当前配置引用的 CPUFriend 文件均未上传。
+此仓库保存脱敏后的 EFI；Git 操作不改动运行中电脑的启动分区。Apple 固件更新文件、配置备份、旧版 Kext 备份，以及未被当前配置引用的 CPUFriend 文件均未上传。
 
 ## CPU 调频
 

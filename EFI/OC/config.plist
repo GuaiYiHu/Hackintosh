@@ -466,7 +466,7 @@
 				<key>BundlePath</key>
 				<string>SimpleHDA.kext</string>
 				<key>Comment</key>
-				<string>SimpleHDA 1.0.0</string>
+				<string>SimpleHDA 1.0.1</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
