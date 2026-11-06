@@ -1,6 +1,6 @@
 # X99 / Xeon E5-2666 v3 / RX 560
 
-本分支 `x99-v.1.41-RX560` 保存这台 X99 电脑的 OpenCore EFI。2026-11-05 按实际启动分区同步，保留原分支历史。
+本分支 `x99-v.1.41-RX560` 保存这台 X99 电脑的 OpenCore EFI。2026-11-07 按实际启动分区只读采集并脱敏同步，保留原分支历史。
 
 | 项目 | 当前配置 |
 | --- | --- |
@@ -9,9 +9,20 @@
 | 显卡 | Radeon RX 560 |
 | 内存 | 64 GB |
 | SMBIOS | MacPro7,1 |
-| 已验证系统 | macOS 26.7.2，build 25G332；Darwin 25.6.0 |
+| 本轮已验证系统 | macOS 15.8.2，build 24H232；Darwin 24.6.0 |
+| 历史已验证系统 | macOS 26.7.2，build 25G332；Darwin 25.6.0 |
 | OpenCore | 1.0.8 RELEASE，与配套 UEFI 驱动一起更新 |
-| CPU 调频 | E5PStateMac 0.4.0 控制版；保留 Lilu 和 CpuTscSync |
+| CPU 调频 | Sequoia 使用 E5PStateMac 0.5.1 控制版；保留原 26 版 0.4.0、Lilu 和 CpuTscSync |
+
+## 2026-11-07 Sequoia 调频与启动策略
+
+加入 `E5PStateMacSequoia.kext` 0.5.1，限定 `MinKernel = MaxKernel = 24.6.0`；原 `E5PStateMac.kext` 0.4.0 仍限定 Darwin 25 及以上注入，两者范围互斥。OpenCore 继续为 1.0.8。除清空四项机器身份字段外，发布的配置与当前 EFI 一致；发布的其他引导文件与当前 EFI 字节一致，`ocvalidate 1.0.8` 校验通过。
+
+本轮启动加载了预期的 0.5.1 模块，默认额外等待为 0 秒。驱动服务在内核 uptime 约 0.94 秒启动，首次通过全部控制门控是在 uptime 约 12.71 秒，即服务启动约 11.77 秒后；全核资格掩码为 `0xFFFFF`。该记录表示首次允许接管的时刻，没有单独记录第一条实际硬件覆盖的时间戳。耗时取决于各核采样与健康条件，不是固定 15 秒或固定 11.77 秒。
+
+20 线程整数满载下，各逻辑核新鲜高负载样本平均约 3.177–3.184 GHz，整体约 3.180 GHz；powermetrics 稳定满载窗口核对约 3.174 GHz。恢复轻载后请求最低 12 倍频，本轮实际有效频率估计最低约 1.278 GHz。新增 40,380 个有效样本，15,549 次控制覆盖全部成功读回，故障和回退均为 0。此次没有进行睡眠唤醒、长期稳定性或吞吐 A/B 测试。
+
+当前 boot-args 未加入 `-e5pmwait15`。需要保留额外预热时可将该 flag 加入实际启动参数；它在自检之外增加至少 15 秒等待，不会跳过自检。该 flag 的 15 秒路径已通过主机回归及静态检查，尚未单独重启验收。详细方法见 [0.5.1 启动与调频验证](https://github.com/GuaiYiHu/E5PStateMac/blob/main/docs/startup-policy.md)。
 
 ## 2026-11-05 引导与驱动升级
 
@@ -42,16 +53,17 @@ Lilu、CpuTscSync、RestrictEvents、USBToolBox、RealtekRTL8111 已与最新稳
 
 ## CPU 调频
 
-源码、编译说明和实现限制见 [E5PStateMac](https://github.com/GuaiYiHu/E5PStateMac/tree/v0.4.0)。本分支携带与本机验证时相同的 0.4.0 控制版二进制：
+源码、编译说明和实现限制见 [E5PStateMac](https://github.com/GuaiYiHu/E5PStateMac)。本分支同时保留两个按系统范围互斥注入的控制版；驱动内部还校验固定内核 UUID、函数指纹及 CPU 身份，注入范围不代表支持范围内的所有内核均可控制。
 
-```text
-SHA-256: 7a1ed9a7f4143c3f77c979dbbb7306955973cd7a8da3237a0923fd617230b6c3
-```
+| 文件 | 目标与策略 | 主二进制 SHA-256 |
+| --- | --- | --- |
+| `E5PStateMacSequoia.kext` 0.5.1 | macOS 15.8.2 / 24H232；默认自检通过即允许接管，`-e5pmwait15` 可选额外预热 | `42f45cff796f5482ef11f96ddbd2fbf90e181cf9ff3984bacc6311329b44010f` |
+| `E5PStateMac.kext` 0.4.0 | macOS 26.7.2 / 25G332；至少 15 秒预热及全核自检 | `7a1ed9a7f4143c3f77c979dbbb7306955973cd7a8da3237a0923fd617230b6c3` |
 
-驱动面向这个固定内核配置。启动或唤醒后至少等待 15 秒，并完成全部逻辑核的连续采样自检，才允许控制频率。它保留空闲降频和原厂睿频限制，未开启 `AppleXcpmForceBoost`，未解锁全核睿频或修改电压、功耗上限。未知内核或自检失败时使用原生策略。
+两版均保留全部 20 个逻辑核连续采样自检、低负载降频和原厂睿频限制；未知内核或自检失败时使用原生策略。未开启 `AppleXcpmForceBoost`，未解锁全核睿频或修改电压、功耗上限。
 
 2026-11-05 首次 0.4.0 短时测试中，全核各核心平均约 3.191–3.195 GHz；低负载下观察到约 1.2 GHz 的请求倍频。相同 7-Zip 23.01、20 线程测试，压缩和解压吞吐量相对原生配置分别提高约 8.0% / 9.4%。这不是 Linux 性能完全对齐的证明；长期稳定性、睡眠唤醒和功耗尚未完成验证。
 
-需要停用时，在备份 EFI 后，将 `Kernel → Add` 中 `E5PStateMac.kext` 的 `Enabled` 设为 `false`，然后重启。不要尝试热卸载此驱动。
+需要停用时可使用启动参数 `-e5pmoff`，或将 `Kernel → Add` 中当前系统对应的 E5PStateMac 条目 `Enabled` 设为 `false`，然后重启。不要尝试热卸载此驱动。
 
 E5PStateMac 的 BSD-2-Clause 许可见 [docs/E5PStateMac-LICENSE.txt](docs/E5PStateMac-LICENSE.txt)。其他 OpenCore 组件和 Kext 的许可由各自上游项目保留。
