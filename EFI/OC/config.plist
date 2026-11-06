@@ -652,9 +652,9 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/E5PStateMac</string>
 				<key>MaxKernel</key>
-				<string>25.6.0</string>
+				<string></string>
 				<key>MinKernel</key>
-				<string>25.6.0</string>
+				<string>25.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
